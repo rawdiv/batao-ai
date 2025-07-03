@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Batao AI</title>
+  <meta name="description" content="About Batao AI – A Desi AI, Made for Bharat. Learn why we built Batao, what it can do, and our vision for AI in India." />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: #111112;
+      min-height: 100vh;
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    }
+    .bg-grid-dots {
+      background: #000000;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px);
+      background-size: 20px 20px, 20px 20px, 20px 20px;
+      background-position: 0 0, 0 0, 0 0;
+    }
+    .glass {
+      background: rgba(10,10,10,0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 32px 0 rgba(0,0,0,0.18);
+      transition: background 0.3s, border 0.3s, box-shadow 0.3s;
+    }
+    .glass.scrolled {
+      background: rgba(10,10,10,0.85);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 6px 32px 0 rgba(0,0,0,0.28);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(-32px);
+      animation: fadeInTop 1s forwards;
+    }
+    @keyframes fadeInTop {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .scale-in {
+      opacity: 0;
+      transform: scale(0.85);
+      animation: scaleIn 0.7s 0.7s cubic-bezier(.68,-0.55,.27,1.55) forwards;
+    }
+    @keyframes scaleIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    @keyframes bharatFade {
+      0% { opacity: 0; transform: translateY(32px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-bharat-fade {
+      animation: bharatFade 1.2s 0.2s both;
+    }
+    .animate-bharat-fade2 {
+      animation: bharatFade 1.2s 0.7s both;
+    }
+    @media (max-width: 640px) {
+      .glass-card {
+        border-radius: 1.2rem;
+        padding: 1.5rem 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body class="relative overflow-x-hidden bg-grid-dots">
+  <!-- Floating Navbar -->
+  <nav id="navbar" class="glass fixed top-6 left-1/2 -translate-x-1/2 w-[95vw] max-w-4xl flex items-center justify-between px-6 py-3 z-30 shadow-lg">
+    <div></div>
+    <ul class="hidden md:flex flex-1 justify-center gap-6 text-white/90 font-medium text-base">
+      <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+      <li><a href="about.html" class="hover:text-white transition">About</a></li>
+      <li><a href="#features" class="hover:text-white transition">Features</a></li>
+      <li><a href="https://wa.me/919999999999" target="_blank" class="hover:text-white transition">WhatsApp</a></li>
+      <li><a href="#subscribe" class="hover:text-white transition">Subscribe</a></li>
+    </ul>
+    <button id="nav-toggle" class="md:hidden flex items-center justify-center w-10 h-10 text-white focus:outline-none">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <div id="mobile-menu" class="fixed inset-0 bg-black/90 backdrop-blur-lg z-50 flex flex-col items-center justify-center gap-8 text-white text-xl font-semibold transition-all duration-300 opacity-0 pointer-events-none">
+      <button id="nav-close" class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <a href="index.html" class="hover:text-orange-400 transition">Home</a>
+      <a href="about.html" class="hover:text-orange-400 transition">About</a>
+      <a href="#features" class="hover:text-orange-400 transition">Features</a>
+      <a href="https://wa.me/919999999999" target="_blank" class="hover:text-orange-400 transition">WhatsApp</a>
+      <a href="#subscribe" class="hover:text-orange-400 transition">Subscribe</a>
+    </div>
+  </nav>
+
+  <!-- About Content -->
+  <main class="relative w-full flex flex-col items-center justify-center py-24 min-h-screen">
+    <div class="max-w-3xl w-full mx-auto glass p-8 md:p-12 flex flex-col items-center text-center shadow-2xl mt-20">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-6 animate-bharat-fade">A Desi AI, Made for Bharat</h1>
+      <p class="text-lg md:text-xl text-white/90 mb-8 animate-bharat-fade2">
+        Batao AI isn't just another chatbot — it's an effort to make powerful AI accessible to everyone in India. Built with the idea that language, comfort, and simplicity matter, Batao speaks the way you do — in Hindi, English, Hinglish, Marathi, Bengali, and more.
+      </p>
+      <p class="text-base text-white/80 mb-8">
+        We created Batao to be your digital companion — whether you're solving a tough math concept, asking life questions, generating images, or just exploring your curiosity. You don't need to be a coder. You don't need perfect grammar. You just need to ask.
+      </p>
+      <div class="w-full flex flex-col items-start text-left mb-8">
+        <h2 class="text-2xl font-bold text-orange-400 mb-2">🇮🇳 Why We Built It</h2>
+        <p class="text-white/90 mb-4">India is full of people who are smart, curious, and ambitious — but many tech tools feel foreign, confusing, or just out of reach. We wanted to change that. With Batao AI, we've built something that feels local, familiar, and personal.</p>
+        <p class="text-white/80 mb-4">No more language barriers. No complicated signups. No talking like a machine.<br>Just type or speak the way you normally do — and Batao will understand.</p>
+      </div>
+      <div class="w-full flex flex-col items-start text-left mb-8">
+        <h2 class="text-2xl font-bold text-orange-400 mb-2">🔍 What Batao Can Do</h2>
+        <ul class="list-disc list-inside text-white/90 mb-4">
+          <li>Answer school and college doubts in your language</li>
+          <li>Generate creative content like poetry, stories, and ideas</li>
+          <li>Help with resumes, business plans, or writing help</li>
+          <li>Convert text to AI-generated images</li>
+          <li>Available on WhatsApp — no downloads, no pressure</li>
+        </ul>
+      </div>
+      <div class="w-full flex flex-col items-start text-left mb-8">
+        <h2 class="text-2xl font-bold text-orange-400 mb-2">💛 Our Vision</h2>
+        <p class="text-white/90 mb-4">We want to bring the power of AI to every phone in India — not just English-speaking metros. We're building a future where students in small towns, families in rural areas, and creators across the country feel empowered by a tool that respects their voice, language, and needs.</p>
+        <p class="text-white/80 mb-4">This is not just technology. This is a movement — for Bharat.</p>
+      </div>
+      <div class="w-full flex flex-col items-start text-left">
+        <h2 class="text-2xl font-bold text-orange-400 mb-2">🤝 Join the Journey</h2>
+        <p class="text-white/90 mb-4">Whether you're a user, developer, educator, or supporter — you're part of this. We're just getting started, and we'd love to have you with us.</p>
+        <p class="text-white/80 mb-4">Start chatting. Share with friends. Spread the word.<br>Batao is here — and it speaks your language.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full bg-black/95 py-10 px-4 flex flex-col md:flex-row items-center justify-between gap-6 border-t border-white/10">
+    <div class="flex items-center gap-2 mb-4 md:mb-0">
+      <!-- Logo removed -->
+    </div>
+    <ul class="flex gap-6 text-white/70 text-base mb-4 md:mb-0">
+      <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+      <li><a href="about.html" class="hover:text-white transition">About</a></li>
+      <li><a href="#features" class="hover:text-white transition">Features</a></li>
+      <li><a href="https://wa.me/919999999999" target="_blank" class="hover:text-white transition">WhatsApp</a></li>
+      <li><a href="#subscribe" class="hover:text-white transition">Subscribe</a></li>
+    </ul>
+    <div class="text-white/50 text-sm">© 2024 Batao AI. Made with ❤️ in India.</div>
+  </footer>
+
+  <script>
+    // Responsive Navbar Hamburger
+    const navToggle = document.getElementById('nav-toggle');
+    const navClose = document.getElementById('nav-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    navToggle.addEventListener('click', () => {
+      mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+      mobileMenu.classList.add('opacity-100');
+    });
+    navClose.addEventListener('click', () => {
+      mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+      mobileMenu.classList.remove('opacity-100');
+    });
+  </script>
+</body>
+</html> 
